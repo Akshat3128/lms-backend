@@ -2,7 +2,6 @@ import dotenv from "dotenv";
 dotenv.config(); 
 
 import { Sequelize } from "sequelize";
-// console.log("DB_PASS:", typeof process.env.DB_PASS, process.env.DB_PASS); only used for debugging
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,     
