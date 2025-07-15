@@ -34,7 +34,7 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 5000;
 
 await require("./models/user.model").sync(); // Sync the User model
-
+await require("./models/course.model").sync();
 app.listen(PORT, async () => {
   try {
     await db.authenticate();
