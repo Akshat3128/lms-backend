@@ -12,6 +12,8 @@ import courseRoutes from "./routes/course.routes.js";
 import lessonRoutes from "./routes/lesson.routes.js";
 import quizRoutes from "./routes/quiz.routes.js";
 import questionRoutes from "./routes/question.routes.js";
+import quizAttemptRoutes from "./routes/quizAttempt.routes.js";
+import lessonProgressRoutes from "./routes/lessonProgress.routes.js";
 
 // Sync models
 import "./models/user.model.js";
@@ -20,7 +22,8 @@ import "./models/enrollment.model.js";
 import "./models/lesson.model.js";
 import "./models/quiz.model.js";
 import "./models/question.model.js";
-
+import "./models/quizAttempt.model.js";
+import "./models/lessonProgress.model.js";
 
 const app = express();
 
@@ -34,6 +37,8 @@ app.use("/api/courses", courseRoutes);
 app.use("/api/courses", lessonRoutes);
 app.use("/api/quizzes", quizRoutes);
 app.use("/api/questions", questionRoutes);
+app.use("/api/quiz-attempts", quizAttemptRoutes);
+app.use("/api/lesson-progress", lessonProgressRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
