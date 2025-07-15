@@ -2,6 +2,7 @@
 import Course from "../models/course.model.js";
 import Lesson from "../models/lesson.model.js";
 import { lessonSchema } from "../validators/lesson.validator.js";
+import { getPaginationParams, buildPaginatedResponse } from "../utils/paginate.js";
 
 export const createLesson = async (req, res) => {
   const courseId = req.params.courseId;
@@ -23,10 +24,19 @@ export const createLesson = async (req, res) => {
 };
 
 export const getLessonsByCourse = async (req, res) => {
+  const courseId = req.params.courseId;
+  const { page, limit, offset } = getPaginationParams(req);
+
   try {
-    const lessons = await Lesson.findAll({ where: { courseId: req.params.courseId } });
-    res.json(lessons);
+    const { count, rows } = await Lesson.findAndCountAll({
+      where: { courseId },
+      offset,
+      limit,
+      order: [["createdAt", "ASC"]],
+    });
+
+    res.json(buildPaginatedResponse(rows, count, page, limit));
   } catch (err) {
-    res.status(500).json({ error: "Failed to fetch lessons" });
+    res.status(500).json({ error: "Failed to fetch lessons", detail: err.message });
   }
 };

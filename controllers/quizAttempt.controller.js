@@ -2,6 +2,7 @@
 import QuizAttempt from "../models/quizAttempt.model.js";
 import Question from "../models/question.model.js";
 import { quizAttemptSchema } from "../validators/quizAttempt.validator.js";
+import { getPaginationParams, buildPaginatedResponse } from "../utils/paginate.js";
 
 export const submitQuiz = async (req, res) => {
     if (req.user.role === "admin") {
@@ -42,11 +43,19 @@ export const getMyAttempts = async (req, res) => {
     if (req.user.role === "admin") {
         return res.status(403).json({ error: "Admins cannot see submitted quizzes" });
     }
+    const userId = req.user.id;
+    const { page, limit, offset } = getPaginationParams(req);
 
     try {
-        const attempts = await QuizAttempt.findAll({ where: { userId: req.user.id } });
-        res.json(attempts);
+        const { count, rows } = await QuizAttempt.findAndCountAll({
+        where: { userId },
+        offset,
+        limit,
+        order: [["createdAt", "DESC"]],
+        });
+
+        res.json(buildPaginatedResponse(rows, count, page, limit));
     } catch (err) {
-        res.status(500).json({ error: "Failed to fetch attempts" });
+        res.status(500).json({ error: "Failed to fetch attempts", detail: err.message });
     }
 };

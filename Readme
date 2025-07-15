@@ -1,0 +1,44 @@
+# LMS Backend
+
+A full-featured Learning Management System backend built with Node.js + PostgreSQL.
+
+## Features
+- User Signup/Login with JWT
+- Role-based access (admin vs user)
+- Course & Lesson Management
+- Quiz & Question Creation
+- Quiz Submission + Auto-Grading
+- Lesson Completion Tracking
+- Secure, Validated, RESTful API
+
+## Tech Stack
+- Node.js + Express (ESM)
+- PostgreSQL + Sequelize
+- JWT Auth
+- Joi Validation
+- Postman for Testing
+
+## Setup
+
+```bash
+git clone <repo-url>
+cd lms-backend
+npm install
+cp .env.example .env
+# Add DB credentials in .env
+npm run dev
+
+Author: Akshat Saxena
+---
+
+## ✅ Final Status: DONE! 🎉
+
+backend is now:
+- 🎯 Feature-complete
+- 🔐 Secure
+- 🚀 Ready for deployment
+- 👨‍💻 Easy to maintain
+
+---
+
+

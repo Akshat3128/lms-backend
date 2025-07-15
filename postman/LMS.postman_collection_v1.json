@@ -1,0 +1,2445 @@
+{
+	"info": {
+		"_postman_id": "c7f1868a-34c2-4352-898f-2368488f9830",
+		"name": "LMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37333613"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fullName\": \"Akshat Saxena\",\r\n  \"email\": \"akshat@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000 /api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000 ",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYxMDkyNDJhLTdiYmQtNGFjMS05MmNmLTQ2YjI0OGMzZDI4YiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzUyNTgwMzQyLCJleHAiOjE3NTMxODUxNDJ9.5lwDIGqlMnKWO6XzUrOfvFBuUffStMUjd9D3J1JtB4k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"akshat@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"akshat@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 12:06:57 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752581278"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "217"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d9-yv3Gt/AukoHOI8yQ1ZADK+JhK7A\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYxMDkyNDJhLTdiYmQtNGFjMS05MmNmLTQ2YjI0OGMzZDI4YiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzUyNTgxMjE4LCJleHAiOjE3NTMxODYwMTh9.0uhLaN3VMQ-WSa9bU3atpZZHFvp1sU8Ie7Pe1jvMRio\"\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"admin123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 13:23:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752585858"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "219"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"db-mzhc3jOgVTUm2CnKkmjNmE94GnI\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhODUwMzUwLThlYjUtNDMzOC05NmQzLWUxYmEyMTFlMjFiMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjU4NTc5NywiZXhwIjoxNzUzMTkwNTk3fQ.SXDXfhtiNQteB_wQKDzzuWOB9aREhql7AWR_aw5Tewc\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "CreateCourse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhODUwMzUwLThlYjUtNDMzOC05NmQzLWUxYmEyMTFlMjFiMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjU4NTc5NywiZXhwIjoxNzUzMTkwNTk3fQ.SXDXfhtiNQteB_wQKDzzuWOB9aREhql7AWR_aw5Tewc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Fullstack Masterclass\",\r\n  \"description\": \"Learn fullstack with Node and PostgreSQL\",\r\n  \"instructor\": \"Akshat Saxena\",\r\n  \"price\": 499\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Fullstack Masterclass\",\r\n  \"description\": \"Learn fullstack with Node and PostgreSQL\",\r\n  \"instructor\": \"Akshat Saxena\",\r\n  \"price\": 499\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 13:25:32 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752585993"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "253"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fd-+ZhDgSUfB7K8tCMuWNVTGinHVDk\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\",\n    \"title\": \"Fullstack Masterclass\",\n    \"description\": \"Learn fullstack with Node and PostgreSQL\",\n    \"instructor\": \"Akshat Saxena\",\n    \"price\": 499,\n    \"updatedAt\": \"2025-07-15T13:25:32.471Z\",\n    \"createdAt\": \"2025-07-15T13:25:32.471Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllCourses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhODUwMzUwLThlYjUtNDMzOC05NmQzLWUxYmEyMTFlMjFiMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjU4NTc5NywiZXhwIjoxNzUzMTkwNTk3fQ.SXDXfhtiNQteB_wQKDzzuWOB9aREhql7AWR_aw5Tewc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Fullstack Masterclass\",\r\n  \"description\": \"Learn fullstack with Node and PostgreSQL\",\r\n  \"instructor\": \"Akshat Saxena\",\r\n  \"price\": 499\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/courses?page=1&limit=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllCourses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Fullstack Masterclass\",\r\n  \"description\": \"Learn fullstack with Node and PostgreSQL\",\r\n  \"instructor\": \"Akshat Saxena\",\r\n  \"price\": 499\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/courses?page=1&limit=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "97"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 18:59:48 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752605995"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "317"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13d-WEzAd0RoVqgnqO77adyUqM4sPyQ\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\",\n            \"title\": \"Fullstack Masterclass\",\n            \"description\": \"Learn fullstack with Node and PostgreSQL\",\n            \"instructor\": \"Akshat Saxena\",\n            \"price\": 499,\n            \"createdAt\": \"2025-07-15T13:25:32.471Z\",\n            \"updatedAt\": \"2025-07-15T13:25:32.471Z\"\n        }\n    ],\n    \"meta\": {\n        \"total\": 1,\n        \"page\": 1,\n        \"limit\": 5,\n        \"totalPages\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "EnrolInCourseById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Fullstack Masterclass\",\r\n  \"description\": \"Learn fullstack with Node and PostgreSQL\",\r\n  \"instructor\": \"Akshat Saxena\",\r\n  \"price\": 499\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/courses/0a2205e5-db46-4c27-bc20-ab2ba2c9f184/enroll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses",
+										"0a2205e5-db46-4c27-bc20-ab2ba2c9f184",
+										"enroll"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "97"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 14:23:49 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752589431"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-+Ujk/96PxtD1SN0TGIqtAV0WP6w\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Already enrolled in this course\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Lessons",
+			"item": [
+				{
+					"name": "AddLessontoCourse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhODUwMzUwLThlYjUtNDMzOC05NmQzLWUxYmEyMTFlMjFiMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjU4NTc5NywiZXhwIjoxNzUzMTkwNTk3fQ.SXDXfhtiNQteB_wQKDzzuWOB9aREhql7AWR_aw5Tewc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Intro to Fullstack\",\r\n  \"videoUrl\": \"https://youtu.be/XlvsJLer_No?si=Bwvr-xj69NKc3BmL\",\r\n  \"resourceLink\": \"https://full-stack-development.readthedocs.io/en/latest/\"\r\n}\r\n//only admin can use this",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/courses/0a2205e5-db46-4c27-bc20-ab2ba2c9f184/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"courses",
+								"0a2205e5-db46-4c27-bc20-ab2ba2c9f184",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLessonForCourse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhODUwMzUwLThlYjUtNDMzOC05NmQzLWUxYmEyMTFlMjFiMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjU4NTc5NywiZXhwIjoxNzUzMTkwNTk3fQ.SXDXfhtiNQteB_wQKDzzuWOB9aREhql7AWR_aw5Tewc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/courses/0a2205e5-db46-4c27-bc20-ab2ba2c9f184/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"courses",
+								"0a2205e5-db46-4c27-bc20-ab2ba2c9f184",
+								"lessons"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetLessonForCourse",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/courses/0a2205e5-db46-4c27-bc20-ab2ba2c9f184/lessons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses",
+										"0a2205e5-db46-4c27-bc20-ab2ba2c9f184",
+										"lessons"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 14:38:32 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752590373"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "340"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"154-QnShBwrcoA+F8pJue3GmeIOs6yc\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"485444a3-840e-4538-a78c-d27d76e9536c\",\n        \"title\": \"Intro to Fullstack\",\n        \"videoUrl\": \"https://youtu.be/XlvsJLer_No?si=Bwvr-xj69NKc3BmL\",\n        \"resourceLink\": \"https://full-stack-development.readthedocs.io/en/latest/\",\n        \"courseId\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\",\n        \"createdAt\": \"2025-07-15T14:36:31.794Z\",\n        \"updatedAt\": \"2025-07-15T14:36:31.794Z\"\n    }\n]"
+						},
+						{
+							"name": "GetLessonForCourse",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/courses/0a2205e5-db46-4c27-bc20-ab2ba2c9f184/lessons?page=1&limit=3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses",
+										"0a2205e5-db46-4c27-bc20-ab2ba2c9f184",
+										"lessons"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 19:02:10 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752606191"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "402"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"192-K7p6jS9dElYpKw13GUwwqHVsE1k\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"485444a3-840e-4538-a78c-d27d76e9536c\",\n            \"title\": \"Intro to Fullstack\",\n            \"videoUrl\": \"https://youtu.be/XlvsJLer_No?si=Bwvr-xj69NKc3BmL\",\n            \"resourceLink\": \"https://full-stack-development.readthedocs.io/en/latest/\",\n            \"courseId\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\",\n            \"createdAt\": \"2025-07-15T14:36:31.794Z\",\n            \"updatedAt\": \"2025-07-15T14:36:31.794Z\"\n        }\n    ],\n    \"meta\": {\n        \"total\": 1,\n        \"page\": 1,\n        \"limit\": 3,\n        \"totalPages\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "MarkLessonAsComplete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYxMDkyNDJhLTdiYmQtNGFjMS05MmNmLTQ2YjI0OGMzZDI4YiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzUyNTgxMjE4LCJleHAiOjE3NTMxODYwMTh9.0uhLaN3VMQ-WSa9bU3atpZZHFvp1sU8Ie7Pe1jvMRio",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/lesson-progress/485444a3-840e-4538-a78c-d27d76e9536c/complete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"lesson-progress",
+								"485444a3-840e-4538-a78c-d27d76e9536c",
+								"complete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/lesson-progress/485444a3-840e-4538-a78c-d27d76e9536c/complete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"lesson-progress",
+										"485444a3-840e-4538-a78c-d27d76e9536c",
+										"complete"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 17:29:53 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752600654"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "311"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"137-DmNsgUHe2z7EuC5Nci1A0vXXGB8\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Lesson marked completed\",\n    \"progress\": {\n        \"id\": \"dfba6452-5cc6-4f5c-996c-0cfddf6f2c51\",\n        \"completedAt\": \"2025-07-15T17:29:53.908Z\",\n        \"userId\": \"f109242a-7bbd-4ac1-92cf-46b248c3d28b\",\n        \"lessonId\": \"485444a3-840e-4538-a78c-d27d76e9536c\",\n        \"updatedAt\": \"2025-07-15T17:29:53.919Z\",\n        \"createdAt\": \"2025-07-15T17:29:53.919Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetLessonCompleted",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "LessonProgress",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/lesson-progress/course/0a2205e5-db46-4c27-bc20-ab2ba2c9f184",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"lesson-progress",
+										"course",
+										"0a2205e5-db46-4c27-bc20-ab2ba2c9f184"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 17:49:46 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752601809"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "93"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5d-/2XLoa7g1tQdlHSSHOsMfPE+P+Q\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"courseId\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\",\n    \"completed\": 1,\n    \"total\": 1,\n    \"progress\": \"100%\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Quiz",
+			"item": [
+				{
+					"name": "CreateQuiz",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhODUwMzUwLThlYjUtNDMzOC05NmQzLWUxYmEyMTFlMjFiMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjU5Mjg0OCwiZXhwIjoxNzUzMTk3NjQ4fQ.fSYYE_Hwt6ZaTUBOtTPliLesj4K1oCMAWEGl-xOfJd4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"JavaScript Basics-2\",\r\n  \"courseId\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/quizzes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"quizzes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"JavaScript Basics-2\",\r\n  \"courseId\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/quizzes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"quizzes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 15:21:56 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752592977"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-yVaeg+DO9KlRzETJ/Z85WkiEkKE\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\n    \"title\": \"JavaScript Basics-2\",\n    \"courseId\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\",\n    \"updatedAt\": \"2025-07-15T15:21:57.099Z\",\n    \"createdAt\": \"2025-07-15T15:21:57.099Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "AddQuestionToQuiz",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhODUwMzUwLThlYjUtNDMzOC05NmQzLWUxYmEyMTFlMjFiMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjU5Mjg0OCwiZXhwIjoxNzUzMTk3NjQ4fQ.fSYYE_Hwt6ZaTUBOtTPliLesj4K1oCMAWEGl-xOfJd4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\r\n  \"questionText\": \"Which of the following is NOT a valid JavaScript data type?\",\r\n  \"options\": [\"Character\", \"Array\", \"Number\", \"String\"],\r\n  \"correctAnswer\": \"Character\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/questions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"questions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\r\n  \"questionText\": \"Which of the following is NOT a valid JavaScript data type?\",\r\n  \"options\": [\"Character\", \"Array\", \"Number\", \"String\"],\r\n  \"correctAnswer\": \"Character\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/questions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"questions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 15:28:50 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752593391"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "326"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"146-6K3bVRCbpH67QFlpH8Ywt0abK7o\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"0b09e393-b27d-47f4-9d14-0d9b77f11141\",\n    \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\n    \"questionText\": \"Which of the following is NOT a valid JavaScript data type?\",\n    \"options\": [\n        \"Character\",\n        \"Array\",\n        \"Number\",\n        \"String\"\n    ],\n    \"correctAnswer\": \"Character\",\n    \"updatedAt\": \"2025-07-15T15:28:50.782Z\",\n    \"createdAt\": \"2025-07-15T15:28:50.782Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllQuiz",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhODUwMzUwLThlYjUtNDMzOC05NmQzLWUxYmEyMTFlMjFiMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjU5Mjg0OCwiZXhwIjoxNzUzMTk3NjQ4fQ.fSYYE_Hwt6ZaTUBOtTPliLesj4K1oCMAWEGl-xOfJd4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\r\n  \"questionText\": \"Which of the following is NOT a valid JavaScript data type?\",\r\n  \"options\": [\"Character\", \"Array\", \"Number\", \"String\"],\r\n  \"correctAnswer\": \"Character\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/quizzes/course/0a2205e5-db46-4c27-bc20-ab2ba2c9f184",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"quizzes",
+								"course",
+								"0a2205e5-db46-4c27-bc20-ab2ba2c9f184"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\r\n  \"questionText\": \"Which of the following is NOT a valid JavaScript data type?\",\r\n  \"options\": [\"Character\", \"Array\", \"Number\", \"String\"],\r\n  \"correctAnswer\": \"Character\"\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/quizzes/course/0a2205e5-db46-4c27-bc20-ab2ba2c9f184",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"quizzes",
+										"course",
+										"0a2205e5-db46-4c27-bc20-ab2ba2c9f184"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 15:31:08 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752593529"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "407"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"197-1kSJQj4khf7XfPfgbu04sOzgGdc\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"f517debb-0512-4091-b94f-ecbf5c8ed349\",\n        \"title\": \"JavaScript Basics\",\n        \"courseId\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\",\n        \"createdAt\": \"2025-07-15T15:21:17.404Z\",\n        \"updatedAt\": \"2025-07-15T15:21:17.404Z\"\n    },\n    {\n        \"id\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\n        \"title\": \"JavaScript Basics-2\",\n        \"courseId\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\",\n        \"createdAt\": \"2025-07-15T15:21:57.099Z\",\n        \"updatedAt\": \"2025-07-15T15:21:57.099Z\"\n    }\n]"
+						},
+						{
+							"name": "GetAllQuiz",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/quizzes/course/0a2205e5-db46-4c27-bc20-ab2ba2c9f184?page=1&limit=3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"quizzes",
+										"course",
+										"0a2205e5-db46-4c27-bc20-ab2ba2c9f184"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 19:09:06 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752606586"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "469"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d5-Hqw5veUEnV2OxeMKi5c7uaxyOX4\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\n            \"title\": \"JavaScript Basics-2\",\n            \"courseId\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\",\n            \"createdAt\": \"2025-07-15T15:21:57.099Z\",\n            \"updatedAt\": \"2025-07-15T15:21:57.099Z\"\n        },\n        {\n            \"id\": \"f517debb-0512-4091-b94f-ecbf5c8ed349\",\n            \"title\": \"JavaScript Basics\",\n            \"courseId\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\",\n            \"createdAt\": \"2025-07-15T15:21:17.404Z\",\n            \"updatedAt\": \"2025-07-15T15:21:17.404Z\"\n        }\n    ],\n    \"meta\": {\n        \"total\": 2,\n        \"page\": 1,\n        \"limit\": 3,\n        \"totalPages\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetQuizWithQuestion",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\r\n  \"questionText\": \"Which of the following is NOT a valid JavaScript data type?\",\r\n  \"options\": [\"Character\", \"Array\", \"Number\", \"String\"],\r\n  \"correctAnswer\": \"Character\"\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/quizzes/3575807c-04f2-4b74-bf2a-61abece457b6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"quizzes",
+										"3575807c-04f2-4b74-bf2a-61abece457b6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 15:32:47 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752593628"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "868"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"364-m3mR5Uuj0/icngnfKvx+jLtfing\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\n    \"title\": \"JavaScript Basics-2\",\n    \"courseId\": \"0a2205e5-db46-4c27-bc20-ab2ba2c9f184\",\n    \"createdAt\": \"2025-07-15T15:21:57.099Z\",\n    \"updatedAt\": \"2025-07-15T15:21:57.099Z\",\n    \"Questions\": [\n        {\n            \"id\": \"b8fdb436-de8f-4608-8f4d-ed446b9a5aaf\",\n            \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\n            \"questionText\": \"What does '===' mean in JS?\",\n            \"options\": [\n                \"Strict equality\",\n                \"Loose equality\",\n                \"Assignment\",\n                \"Comparison\"\n            ],\n            \"correctAnswer\": \"Strict equality\",\n            \"createdAt\": \"2025-07-15T15:24:58.045Z\",\n            \"updatedAt\": \"2025-07-15T15:24:58.045Z\"\n        },\n        {\n            \"id\": \"0b09e393-b27d-47f4-9d14-0d9b77f11141\",\n            \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\n            \"questionText\": \"Which of the following is NOT a valid JavaScript data type?\",\n            \"options\": [\n                \"Character\",\n                \"Array\",\n                \"Number\",\n                \"String\"\n            ],\n            \"correctAnswer\": \"Character\",\n            \"createdAt\": \"2025-07-15T15:28:50.782Z\",\n            \"updatedAt\": \"2025-07-15T15:28:50.782Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "SubmitAQuiz",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYxMDkyNDJhLTdiYmQtNGFjMS05MmNmLTQ2YjI0OGMzZDI4YiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzUyNTgxMjE4LCJleHAiOjE3NTMxODYwMTh9.0uhLaN3VMQ-WSa9bU3atpZZHFvp1sU8Ie7Pe1jvMRio",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\r\n  \"answers\": [\r\n    {\r\n      \"questionId\": \"b8fdb436-de8f-4608-8f4d-ed446b9a5aaf\",\r\n      \"selectedAnswer\": \"Strict equality\"\r\n    },\r\n    {\r\n      \"questionId\": \"0b09e393-b27d-47f4-9d14-0d9b77f11141\",\r\n      \"selectedAnswer\": \"Array\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/quiz-attempts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"quiz-attempts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\r\n  \"answers\": [\r\n    {\r\n      \"questionId\": \"b8fdb436-de8f-4608-8f4d-ed446b9a5aaf\",\r\n      \"selectedAnswer\": \"Strict equality\"\r\n    },\r\n    {\r\n      \"questionId\": \"0b09e393-b27d-47f4-9d14-0d9b77f11141\",\r\n      \"selectedAnswer\": \"Array\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/quiz-attempts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"quiz-attempts"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 17:10:26 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752599460"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30-n0pB8ccbDKfhOyywnMokSFjUR4Y\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Quiz submitted\",\n    \"score\": 1,\n    \"total\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "AllQuizAttempts",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\r\n  \"answers\": [\r\n    {\r\n      \"questionId\": \"b8fdb436-de8f-4608-8f4d-ed446b9a5aaf\",\r\n      \"selectedAnswer\": \"Strict equality\"\r\n    },\r\n    {\r\n      \"questionId\": \"0b09e393-b27d-47f4-9d14-0d9b77f11141\",\r\n      \"selectedAnswer\": \"Array\"\r\n    }\r\n  ]\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/quiz-attempts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"quiz-attempts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jul 2025 17:11:39 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1752599560"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f1-oFQIFx05F0i4LnsxhiGLRcX4zX4\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"10123116-3f0e-40ce-adc5-157ec1a1e41b\",\n        \"userId\": \"f109242a-7bbd-4ac1-92cf-46b248c3d28b\",\n        \"quizId\": \"3575807c-04f2-4b74-bf2a-61abece457b6\",\n        \"score\": 1,\n        \"total\": 2,\n        \"createdAt\": \"2025-07-15T17:10:27.139Z\",\n        \"updatedAt\": \"2025-07-15T17:10:27.139Z\"\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}

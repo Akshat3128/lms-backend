@@ -2,11 +2,19 @@
 import Course from "../models/course.model.js";
 import Enrollment from "../models/enrollment.model.js";
 import { courseSchema } from "../validators/course.validator.js";
+import { getPaginationParams, buildPaginatedResponse } from "../utils/paginate.js";
 
 export const getAllCourses = async (req, res) => {
   try {
-    const courses = await Course.findAll();
-    res.json(courses);
+    const { page, limit, offset } = getPaginationParams(req);
+
+    const { count, rows } = await Course.findAndCountAll({
+      offset,
+      limit,
+      order: [["createdAt", "DESC"]],
+    });
+
+    res.json(buildPaginatedResponse(rows, count, page, limit));
   } catch (err) {
     res.status(500).json({ error: "Failed to fetch courses" });
   }
