@@ -1,23 +1,23 @@
 // validators/auth.validator.js
-const Joi = require("joi");
+import Joi from "joi";
 
-exports.signupSchema = Joi.object({
-  fullName: Joi.string().min(3).max(50).required().messages({
-    "string.empty": "Full name is required",
-    "string.min": "Full name must be at least 3 characters",
-  }),
+export const signupSchema = Joi.object({
+  fullName: Joi.string().min(3).max(50).required(),
   email: Joi.string()
     .pattern(/^[a-zA-Z0-9._%+-]+@gmail\.com$/)
     .required()
     .messages({
       "string.pattern.base": "Email must be a valid @gmail.com address",
     }),
-  password: Joi.string().min(6).max(100).required().messages({
-    "string.min": "Password must be at least 6 characters long",
-  }),
+  password: Joi.string().min(6).max(100).required(),
+  role: Joi.string().valid("user").required()
+    .messages({
+      "any.only": "Only 'user' role is allowed during signup"
+    })
 });
 
-exports.loginSchema = Joi.object({
+
+export const loginSchema = Joi.object({
   email: Joi.string()
     .pattern(/^[a-zA-Z0-9._%+-]+@gmail\.com$/)
     .required()

@@ -1,6 +1,7 @@
-const Joi = require("joi");
+// validators/course.validator.js
+import Joi from "joi";
 
-exports.courseSchema = Joi.object({
+export const courseSchema = Joi.object({
   title: Joi.string().min(3).required(),
   description: Joi.string().min(10).required(),
   instructor: Joi.string().required(),

@@ -1,7 +1,9 @@
-const Course = require("../models/course.model");
-const { courseSchema } = require("../validators/course.validator");
+// controllers/course.controller.js
+import Course from "../models/course.model.js";
+import Enrollment from "../models/enrollment.model.js";
+import { courseSchema } from "../validators/course.validator.js";
 
-const getAllCourses = async (req, res) => {
+export const getAllCourses = async (req, res) => {
   try {
     const courses = await Course.findAll();
     res.json(courses);
@@ -10,7 +12,8 @@ const getAllCourses = async (req, res) => {
   }
 };
 
-const getCourseById = async (req, res) => {
+export const getCourseById = async (req, res) => {
+  
   try {
     const course = await Course.findByPk(req.params.id);
     if (!course) return res.status(404).json({ error: "Course not found" });
@@ -20,7 +23,11 @@ const getCourseById = async (req, res) => {
   }
 };
 
-const createCourse = async (req, res) => {
+export const createCourse = async (req, res) => {
+  if (req.user.role !== "admin") {
+    return res.status(403).json({ error: "Only admins can create courses" });
+  }
+
   const { error } = courseSchema.validate(req.body);
   if (error) return res.status(400).json({ error: error.details[0].message });
 
@@ -32,8 +39,24 @@ const createCourse = async (req, res) => {
   }
 };
 
-module.exports = {
-  getAllCourses,
-  getCourseById,
-  createCourse,
+
+export const enrollInCourse = async (req, res) => {
+  const userId = req.user.id;
+  const courseId = req.params.id;
+  if (req.user.role !== "user") {
+    return res.status(403).json({ error: "Only user can enroll in a course" });
+  }
+  try {
+    const course = await Course.findByPk(courseId);
+    if (!course) return res.status(404).json({ error: "Course not found" });
+
+    const alreadyEnrolled = await Enrollment.findOne({ where: { userId, courseId } });
+    if (alreadyEnrolled)
+      return res.status(400).json({ error: "Already enrolled in this course" });
+
+    const enrollment = await Enrollment.create({ userId, courseId });
+    res.status(201).json({ message: "Enrolled successfully", enrollment });
+  } catch (err) {
+    res.status(500).json({ error: "Enrollment failed" });
+  }
 };

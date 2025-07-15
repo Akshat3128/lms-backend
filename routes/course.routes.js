@@ -1,11 +1,18 @@
-const express = require("express");
+// routes/course.routes.js
+import express from "express";
+import {
+  getAllCourses,
+  getCourseById,
+  createCourse,
+  enrollInCourse,
+} from "../controllers/course.controller.js";
+import { verifyToken } from "../middlewares/auth.middleware.js";
+
 const router = express.Router();
-const courseController = require("../controllers/course.controller");
-const auth = require("../middlewares/auth.middleware");
 
-router.get("/", courseController.getAllCourses);
-router.get("/:id", courseController.getCourseById);
-router.post("/", auth.verifyToken, courseController.createCourse);
-router.post("/:id/enroll", auth.verifyToken, courseController.enrollInCourse);
+router.get("/", getAllCourses);
+router.get("/:id", getCourseById);
+router.post("/", verifyToken, createCourse);
+router.post("/:id/enroll", verifyToken, enrollInCourse);
 
-module.exports = router;
+export default router;

@@ -1,16 +1,10 @@
 // controllers/auth.controller.js
-const Joi = require("joi");
-const User = require("../models/user.model");
-const { hashPassword, comparePassword, generateToken } = require("../utils/auth");
+import User from "../models/user.model.js";
+import { signupSchema, loginSchema } from "../validators/auth.validator.js";
+import { hashPassword, comparePassword, generateToken } from "../utils/auth.js";
 
-const signup = async (req, res) => {
-  const schema = Joi.object({
-    fullName: Joi.string().required(),
-    email: Joi.string().email().required(),
-    password: Joi.string().min(6).required(),
-  });
-
-  const { error } = schema.validate(req.body);
+export const signup = async (req, res) => {
+  const { error } = signupSchema.validate(req.body);
   if (error) return res.status(400).json({ error: error.details[0].message });
 
   try {
@@ -25,17 +19,13 @@ const signup = async (req, res) => {
     const token = generateToken({ id: user.id, role: user.role });
     res.status(201).json({ token });
   } catch (err) {
-    res.status(500).json({ error: "Signup failed" });
+    res.status(500).json({ error: "Signup failed", detail: err.message });
   }
 };
 
-const login = async (req, res) => {
-  const schema = Joi.object({
-    email: Joi.string().email().required(),
-    password: Joi.string().required(),
-  });
-
-  const { error } = schema.validate(req.body);
+export const login = async (req, res) => {
+  const { error } = loginSchema.validate(req.body);
+  console.log("Request body is:", req.body); 
   if (error) return res.status(400).json({ error: error.details[0].message });
 
   try {
@@ -48,8 +38,6 @@ const login = async (req, res) => {
     const token = generateToken({ id: user.id, role: user.role });
     res.json({ token });
   } catch (err) {
-    res.status(500).json({ error: "Login failed" });
+    res.status(500).json({ error: "Login failed", detail: err.message });
   }
 };
-
-module.exports = { signup, login };
